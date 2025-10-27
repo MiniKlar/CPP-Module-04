@@ -25,6 +25,9 @@ int main()
     const int ARRAY_SIZE = 6; // even number
     AAnimal* animals[ARRAY_SIZE];
 
+	//Test for abstract class
+	//AAnimal a;
+
     for (int i = 0; i < ARRAY_SIZE; ++i) {
         if (i < ARRAY_SIZE / 2)
             animals[i] = new Dog();
