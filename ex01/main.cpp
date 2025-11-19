@@ -22,7 +22,7 @@ int main()
 {
     std::cout << "--- Create array of Animals (Dogs and Cats) ---" << std::endl;
 
-    const int ARRAY_SIZE = 6; // even number
+    const int ARRAY_SIZE = 6;
     Animal* animals[ARRAY_SIZE];
 
     for (int i = 0; i < ARRAY_SIZE; ++i) {

@@ -28,6 +28,7 @@ WrongAnimal::WrongAnimal( std::string const &t ) : type(t) {
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other) {
+	std::cout << "WrongAnimal assignment operator called" << std::endl;
 	if (this != &other) {
 		this->type = other.type;
 	}

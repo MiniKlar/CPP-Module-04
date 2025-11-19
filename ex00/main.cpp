@@ -25,6 +25,7 @@ int main()
     const Animal* j = new Dog();
     const Animal* i = new Cat();
 
+    std::cout << meta->getType() << " " << std::endl;
     std::cout << j->getType() << " " << std::endl;
     std::cout << i->getType() << " " << std::endl;
     i->makeSound(); // cat sound
@@ -40,7 +41,7 @@ int main()
     const WrongAnimal* w = new WrongCat();
 
     std::cout << w->getType() << " " << std::endl;
-    w->makeSound(); // will call WrongAnimal::makeSound because not virtual if implemented that way
+    w->makeSound();
     wmeta->makeSound();
 
     delete wmeta;

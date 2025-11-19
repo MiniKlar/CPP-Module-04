@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:37:04 by lomont            #+#    #+#             */
-/*   Updated: 2025/10/23 01:14:14 by lomont           ###   ########.fr       */
+/*   Updated: 2025/11/19 03:26:01 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Cat::Cat( const Cat& src) : Animal(src) {
 }
 
 Cat& Cat::operator=(const Cat& other) {
+	std::cout << "Cat assignment operator called" << std::endl;
 	if (this != &other) {
 		this->type = other.type;
 	}

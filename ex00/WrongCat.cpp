@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 01:42:48 by lomont            #+#    #+#             */
-/*   Updated: 2025/10/23 01:45:47 by lomont           ###   ########.fr       */
+/*   Updated: 2025/11/19 03:26:28 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ WrongCat::WrongCat( const WrongCat& src) : WrongAnimal(src) {
 }
 
 WrongCat& WrongCat::operator=(const WrongCat& other) {
+	std::cout << "WrongCat assignment operator called" << std::endl;
 	if (this != &other) {
 		this->type = other.type;
 	}

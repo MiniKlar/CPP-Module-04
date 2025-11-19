@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:37:02 by lomont            #+#    #+#             */
-/*   Updated: 2025/10/23 01:13:50 by lomont           ###   ########.fr       */
+/*   Updated: 2025/11/19 03:25:02 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ Animal::Animal( std::string const &t ) : type(t) {
 }
 
 Animal& Animal::operator=(const Animal& other) {
+	std::cout << "Animal assignment operator called" << std::endl;
 	if (this != &other) {
 		this->type = other.type;
 	}

@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:37:04 by lomont            #+#    #+#             */
-/*   Updated: 2025/10/27 22:36:31 by lomont           ###   ########.fr       */
+/*   Updated: 2025/11/19 03:24:23 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Cat::Cat( const Cat& src) : AAnimal(src), Thinker(src.Thinker ? new Brain(*src.T
 }
 
 Cat& Cat::operator=(const Cat& other) {
+	std::cout << "Cat assignment operator called" << std::endl;
 	if (this != &other) {
 		Brain* tmp = other.Thinker ? new Brain(*other.Thinker) : NULL;
 		AAnimal::operator=(other);

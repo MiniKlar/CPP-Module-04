@@ -6,7 +6,7 @@
 /*   By: lomont <lomont@student.42lehavre.fr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 23:37:05 by lomont            #+#    #+#             */
-/*   Updated: 2025/10/27 22:35:52 by lomont           ###   ########.fr       */
+/*   Updated: 2025/11/19 03:24:28 by lomont           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ Dog::Dog( const Dog& src ) : AAnimal(src), Thinker(src.Thinker ? new Brain (*src
 }
 
 Dog& Dog::operator=(const Dog& other) {
+	std::cout << "Dog assignment operator called" << std::endl;
 	if (this != &other) {
 		Brain* tmp = other.Thinker ? new Brain(*other.Thinker) : NULL;
 		AAnimal::operator=(other);
